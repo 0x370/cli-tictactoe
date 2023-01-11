@@ -69,7 +69,7 @@ u8 handle_game(u8 team, u32 x, u32 y, u8 board[static 3][3])
         @param board: multidimensional array representing the game
         @return 0 victory, 1 unfinished, 2 tie
 */
-u8 check_result(u8 board[static 3][3])
+u8 check_result(const u8 board[static 3][3])
 {
         /* top row */
         if (board[0][0] == board[0][1] && board[0][0] == board[0][2])
@@ -172,7 +172,7 @@ i32 main(i32 argc, u8 **argv)
                 state = check_result(board);
                 if (state == 0)
                 {
-                        printf("\n\n you lost!");
+                        printf("\n\nyou lost!");
                         break;
                 }
         }
