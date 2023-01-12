@@ -72,35 +72,35 @@ u8 handle_game(u8 team, u32 x, u32 y, u8 board[static 3][3])
 u8 check_result(const u8 board[static 3][3])
 {
         /* top row */
-        if (board[0][0] == board[0][1] && board[0][0] == board[0][2])
+        if (board[0][0] == board[0][1] && board[0][0] == board[0][2] && board[0][0] > 0)
                 return 0;
 
         /* middle row */
-        if (board[1][0] == board[1][1] && board[1][0] == board[1][2])
+        if (board[1][0] == board[1][1] && board[1][0] == board[1][2] && board[1][0] > 0)
                 return 0;
 
         /* bottom row */
-        if (board[2][0] == board[2][1] && board[2][0] == board[2][2])
+        if (board[2][0] == board[2][1] && board[2][0] == board[2][2] && board[2][0] > 0)
                 return 0;
 
         /* left column */
-        if (board[0][0] == board[1][0] && board[0][0] == board[2][0])
+        if (board[0][0] == board[1][0] && board[0][0] == board[2][0] && board[0][0] > 0)
                 return 0;
 
         /* middle column */
-        if (board[0][1] == board[1][1] && board[0][1] == board[2][1])
+        if (board[0][1] == board[1][1] && board[0][1] == board[2][1] && board[0][1] > 0)
                 return 0;
 
         /* right column */
-        if (board[0][2] == board[1][2] && board[0][2] == board[2][2])
+        if (board[0][2] == board[1][2] && board[0][2] == board[2][2] && board[0][2] > 0)
                 return 0;
 
         /* diagonal left right */
-        if (board[0][0] == board[1][1] && board[0][0] == board[2][2])
+        if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] > 0)
                 return 0;
 
         /* diagonal right left */
-        if (board[0][2] == board[1][1] && board[0][2] == board[2][0])
+        if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] > 0)
                 return 0;
 
         /* tie check */
