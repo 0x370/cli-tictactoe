@@ -16,7 +16,7 @@
         @param board: multidimensional array representing the game
         @return nothing
 */
-void draw_game(const u8 board[static 3][3])
+u0 draw_game(const u8 board[static 3][3])
 {
 #ifdef WINDOWS
         /* using system is bad practice, but it's also the simplest...*/
