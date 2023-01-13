@@ -23,7 +23,7 @@ void draw_game(const u8 board[static 3][3])
         system("cls");
 #else
         printf("\e[1;1H\e[2J");
-#endif // WINDOWS
+#endif /* WINDOWS */
 
         for (u8 row = 0; row < 3; ++row)
         {
